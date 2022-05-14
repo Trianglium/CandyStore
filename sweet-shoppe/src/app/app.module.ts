@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import hammerjs;
+import 'hammerjs';
 
 // Angular Material
 import {MatToolbarModule} from '@angular/material/toolbar';
