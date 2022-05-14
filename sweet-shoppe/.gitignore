@@ -41,4 +41,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
-src/assets/images
+src/assets/images/brand/circlelogo.jpg
+src/assets/images/brand/logobanner.jpg
+src/assets/images/product/fruitcups.jpg
+src/assets/images/store/shelvesleft.jpg
+src/assets/images/store/shelvesright.jpg
+src/assets/images/store/storefront.jpg
