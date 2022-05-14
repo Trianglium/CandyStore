@@ -1,0 +1,41 @@
+// Util Theme colors
+$soft-black: #222;
+$ballet-pink: #fbccd7;
+$faint-pink: #fde6eb;
+$pale-blush: #eb7f9d;
+// Brand Theme
+$deep-blush: #e3638b;
+$persian-pink: #f87c96;
+$alabaster-yellow: #f3f1e6;
+$petite-orchid: #e29896;
+$viking-blue: #4ab2c1;
+$light-purple: #bfa1d0;
+$dark-purple: #8f7ca1;
+
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+	margin: 0px auto;
+	padding: $pad-up-dn $pad-left-right;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.navbar-pink {
+     background-color: $deep-blush;
+}
+.row-header{
+    @include zero-margin(0px,0px);
+}
+
+.row-content {
+    @include zero-margin(50px,0px);
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+.footer{
+    background-color: $pale-blush;
+    @include zero-margin(20px, 0px);
+}
