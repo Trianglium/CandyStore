@@ -25,6 +25,11 @@ body {
 
 .navbar-pink {
      background-color: $deep-blush;
+		 color: $faint-pink;
+		 button {
+			 background-color: $deep-blush;
+			 color: $faint-pink;
+		 }
 }
 .row-header{
     @include zero-margin(0px,0px);
