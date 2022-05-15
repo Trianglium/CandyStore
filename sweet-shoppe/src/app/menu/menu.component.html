@@ -6,45 +6,31 @@
 
   <div fxFlex>
    <div>
-    <h3>Catalog</h3>
+    <h2>Catalog</h2>
     <hr>
     </div>
   </div>
 
-  <div fxFlex>
-   <mat-grid-list class="product-list" cols="2" rowHeight="fit">
-     <mat-grid-tile fxFlex class="list-item" *ngFor="let product of products">
-       <img height="200px" src={{product.image}} alt={{product.name}}>
-       <mat-grid-tile-header>
-         <p><span class="caption-title"> {{product.name}}</span></p>
-       </mat-grid-tile-header>
-       <mat-grid-tile-footer fxFlex>
-          <p><span class="caption-description"> {{product.description}}</span></p>
-       </mat-grid-tile-footer>
-     </mat-grid-tile>
+  <mat-grid-list class="product-list" cols="2" rowHeight="fit">
+      <mat-card class="product-card" *ngFor="let product of products">
+        <mat-card-header>
+          <mat-card-title class="product-title">{{product.name}}</mat-card-title>
+
+        </mat-card-header>
+        <img mat-card-image src={{product.image}} alt={{product.name}}>
+        <mat-card-content>
+          <p>
+            <span class="product-description">
+              {{product.description}}
+            </span>
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
     </mat-grid-list>
-  </div>
 
-
-
-
-    <mat-card class="product-card" *ngFor="let product of products">>
-      <mat-card-header>
-        <mat-card-title class="product-title">{{product.name}}</mat-card-title>
-        
-      </mat-card-header>
-      <img mat-card-image src={{product.image}} alt={{product.name}}>
-      <mat-card-content>
-        <p>
-          <span class="product-description">
-            {{product.description}}
-          </span>
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-    </mat-card>
   </div>
 </div>
