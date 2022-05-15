@@ -9,20 +9,17 @@
     <hr>
     </div>
   </div>
+
   <div fxFlex>
    <mat-grid-list cols="2" rowHeight="200px">
-     
+     <mat-grid-tile fxFlex class="list-item" *ngFor="let product of products">
+       <img height="200px" src={{product.image}} alt={{product.name}}>
+       <mat-grid-tile-footer>
+          <span class="caption-title"> {{product.name}} </span>
+          <span class="caption-body"> {{product.description}} </span>
+       </mat-grid-tile-footer>
+     </mat-grid-tile>
     </mat-grid-list>
   </div>
-  <mat-list>
-    <mat-list-item fxFlex class="list-item" *ngFor="let product of products">
-      <img matListAvatar src={{product.image}} alt={{product.name}}>
-      <p matLine>
-          <span class="caption-title"> {{product.name}} </span>
-      </p>
-      <p matLine class="caption-body">
-          <span> {{product.description}} </span>
-      </p>
-    </mat-list-item>
-  </mat-list>
+
 </div>
