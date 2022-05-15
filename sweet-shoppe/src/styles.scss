@@ -39,3 +39,17 @@ body {
     background-color: $pale-blush;
     @include zero-margin(20px, 0px);
 }
+
+/* Utilities */
+.menu-spacer {
+  flex: 1 1 auto;
+}
+.container {
+    margin: 20px;
+    display:flex;
+}
+
+/* Text Elements */
+.text-center {
+	text-align: center;
+}
