@@ -1,18 +1,15 @@
-<div fxLayout="row"
-          fxLayoutAlign="space-evenly center">
-        <h3>Grid List of Cards</h3>
-        <mat-grid-list cols="2" rowHeight="50px" gutterSize="15px" class="bg-fadedpink">
-          <mat-grid-tile *ngFor="let product of products">
-            <mat-card class="grid-card">
-              <img mat-card-image src={{product.image}} alt={{product.name}}>
-              <mat-card-title class="product-title">
-                {{product.name}}
-              </mat-card-title>
-              <mat-card-content class="product-description">
-                {{product.description}}
-              </mat-card-content>
-            </mat-card>
-          </mat-grid-tile>
-
-        </mat-grid-list>
+<div class="container">
+<div fxLayout="row" fxLayoutAlign="space-evenly center">
+  <div *ngFor="let product of products">
+    <mat-card class="grid-card text-dark">
+      <img mat-card-image src={{product.image}} alt={{product.name}}>
+      <mat-card-title class="product-title">
+          {{product.name}}
+      </mat-card-title>
+      <mat-card-content class="product-description">
+          {{product.description}}
+        </mat-card-content>
+      </mat-card>
   </div>
+</div>
+</div>
