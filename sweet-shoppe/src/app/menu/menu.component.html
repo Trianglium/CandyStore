@@ -1,15 +1,15 @@
 <div class="container">
-<div fxLayout="row" fxLayoutAlign="space-evenly center">
-  <div *ngFor="let product of products">
-    <mat-card class="grid-card text-dark">
-      <img mat-card-image src={{product.image}} alt={{product.name}}>
-      <mat-card-title class="product-title">
-          {{product.name}}
-      </mat-card-title>
-      <mat-card-content class="product-description">
-          {{product.description}}
-        </mat-card-content>
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of products">
+      <mat-card class="grid-card text-dark">
+          <img mat-card-image src={{product.image}} alt={{product.name}}>
+          <mat-card-title class="product-title">
+              {{product.name}}
+          </mat-card-title>
+          <mat-card-content class="product-description">
+              {{product.description}}
+          </mat-card-content>
       </mat-card>
+    </div>
   </div>
-</div>
 </div>
