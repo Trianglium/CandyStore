@@ -1,10 +1,28 @@
-<mat-toolbar>
-  <span>Sweet Shoppe</span>
-  <span class="menu-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+
+  <div fxFlex>
+   <div>
+    <h3>Menu</h3>
+    <hr>
+    </div>
+  </div>
+  <div fxFlex>
+   <mat-grid-list cols="2" rowHeight="200px">
+     
+    </mat-grid-list>
+  </div>
+  <mat-list>
+    <mat-list-item fxFlex class="list-item" *ngFor="let product of products">
+      <img matListAvatar src={{product.image}} alt={{product.name}}>
+      <p matLine>
+          <span class="caption-title"> {{product.name}} </span>
+      </p>
+      <p matLine class="caption-body">
+          <span> {{product.description}} </span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+</div>
