@@ -1,3 +1,16 @@
-.menu-spacer {
-  flex: 1 1 auto;
+.list-item {
+  margin: 10px 10px;
+  word-break: break-word;
+  inline-size: min-content;
+  overflow-wrap: break-word;
+}
+
+.caption-title {
+  margin-bottom: 2%;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+.caption-body {
+  margin-bottom: 2%;
+  font-size: .95em;
 }
