@@ -58,3 +58,14 @@ body {
 .text-center {
 	text-align: center;
 }
+/* Color Utils */
+.bg-fadedpink {
+	background-color: $faint-pink;
+}
+
+.text-light {
+	color: $faint-pink;
+}
+.text-dark {
+	color: $soft-black;
+}
