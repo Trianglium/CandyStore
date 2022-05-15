@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Angular Material
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -15,15 +18,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductComponent } from './product/product.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    ProductComponent
+    ProductComponent,
+    FooterComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
@@ -32,6 +38,7 @@ import { ProductComponent } from './product/product.component';
     MatButtonModule,
     MatIconModule,
     MatListModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
