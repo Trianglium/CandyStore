@@ -8,12 +8,29 @@
   overflow-wrap: break-word;
 }
 
-.caption-title {
+.product-title {
   margin-bottom: 2%;
-  font-size: 1.6em;
-  font-weight: 600;
+  font-size: 1.8em;
+  font-weight: 700;
 }
-.caption-body {
+.product-label {
+  margin-bottom: 2%;
+  font-size: 1.4em;
+  font-weight: 600;
+  background-color: blue;
+  border-radius: 15px;
+  padding: .25em .5em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.product-body {
   margin-bottom: 2%;
   font-size: .95em;
+}
+.product-card {
+  max-width: 400px;
+}
+
+.product-header-image {
+  background-size: cover;
 }
