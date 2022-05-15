@@ -1,6 +1,6 @@
 <div class="container"
      fxLayout="column"
-     fxLayoutGap="10px">
+     fxLayoutGap="15px">
 
 
   <div fxFlex>
@@ -11,12 +11,14 @@
   </div>
 
   <div fxFlex>
-   <mat-grid-list cols="2" rowHeight="200px">
+   <mat-grid-list class="product-list" cols="2" rowHeight="fit">
      <mat-grid-tile fxFlex class="list-item" *ngFor="let product of products">
        <img height="200px" src={{product.image}} alt={{product.name}}>
-       <mat-grid-tile-footer>
-          <span class="caption-title"> {{product.name}} </span>
-          <span class="caption-body"> {{product.description}} </span>
+       <mat-grid-tile-header>
+         <p><span class="caption-title"> {{product.name}}</span></p>
+       </mat-grid-tile-header>
+       <mat-grid-tile-footer fxFlex>
+          <p><span class="caption-description"> {{product.description}}</span></p>
        </mat-grid-tile-footer>
      </mat-grid-tile>
     </mat-grid-list>
