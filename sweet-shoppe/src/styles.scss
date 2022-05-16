@@ -30,6 +30,9 @@ body {
 			 background-color: $deep-blush;
 			 color: $faint-pink;
 		 }
+		 span.brand {
+			 font-weight: 700;
+		 }
 }
 .row-header{
     @include zero-margin(0px,0px);
@@ -49,7 +52,7 @@ body {
 .menu-spacer {
   flex: 1 1 auto;
 }
-.container {
+.flex-container {
     margin: 20px;
     display:flex;
 }
@@ -62,10 +65,18 @@ body {
 .bg-fadedpink {
 	background-color: $faint-pink;
 }
-
+.bg-paleblush {
+	background-color: $pale-blush;
+}
+.bg-balletpink {
+	background-color: $ballet-pink;
+}
 .text-light {
 	color: $faint-pink;
 }
 .text-dark {
 	color: $soft-black;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
