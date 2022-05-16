@@ -103,4 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-utils.sh
+
+# Utilities for mock data and initial development
+/util
