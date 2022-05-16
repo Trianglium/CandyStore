@@ -39,3 +39,40 @@
   width: 100%;
   padding: 15px 15px;
 }
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 299px) {
+  img {
+    width: 600px;
+    height: 600px;
+  }
+}
+@media only screen and (max-width: 573.33px) {
+  mat-card {
+    align-content: center;
+    align-items: center;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 300px) {
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
