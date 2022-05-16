@@ -20,6 +20,9 @@ import { MenuComponent } from './menu/menu.component';
 import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     MenuComponent,
     ProductComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserAnimationsModule,
