@@ -19,6 +19,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
