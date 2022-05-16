@@ -34,7 +34,7 @@ export class MenuComponent implements OnInit {
     },
     {
       "id": "2",
-      "name": "Pineapple Mango Yogurt Parfait",
+      "name": "Strawberry Yogurt Parfait",
       "image": "/assets/images/product/fruitparfaitstrawberry.png",
       "category": "treats",
       "featured": false,
