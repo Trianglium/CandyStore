@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Angular Material
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -16,10 +17,9 @@ import {MatCardModule} from '@angular/material/card';
 // App Components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
 import { MenuComponent } from './menu/menu.component';
 import { ProductComponent } from './product/product.component';
-import { FooterComponent } from './footer/footer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
@@ -37,6 +37,7 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserAnimationsModule,
+    AppRoutingModule,
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
