@@ -23,6 +23,7 @@ import { ProductComponent } from './product/product.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProductService } from './services/product.service';
 
 
 @NgModule({
@@ -49,7 +50,7 @@ import { ContactComponent } from './contact/contact.component';
     FlexLayoutModule,
     NgbModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
