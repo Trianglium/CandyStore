@@ -9,8 +9,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'menu',
-    component: MenuComponent
+    path: 'menu', component: MenuComponent,
+    children: [
+      { path: 'product', component: ProductComponent }
+    ]
   },
   {
     path: '',
