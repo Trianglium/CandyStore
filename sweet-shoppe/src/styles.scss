@@ -1,3 +1,5 @@
+@import 'variables';
+
 // Util Theme colors
 $soft-black: #222;
 $ballet-pink: #fbccd7;
@@ -24,11 +26,11 @@ body {
 }
 
 .navbar-pink {
-     background-color: $deep-blush;
+     background-color: $red;
 		 color: $faint-pink;
 		 button {
-			 background-color: $deep-blush;
-			 color: $faint-pink;
+			 background-color: $red;
+			 color: $pink;
 		 }
 		 span.brand {
 			 font-weight: 700;
@@ -44,7 +46,7 @@ body {
     min-height:400px;
 }
 .footer{
-    background-color: $pale-blush;
+    background-color: $pink;
     @include zero-margin(20px, 0px);
 }
 
@@ -62,14 +64,78 @@ body {
 	text-align: center;
 }
 /* Color Utils */
+/* Background Colors */
 .bg-fadedpink {
 	background-color: $faint-pink;
 }
-.bg-paleblush {
-	background-color: $pale-blush;
+.bg-dark {
+  background-color: $soft-black;
 }
 .bg-balletpink {
-	background-color: $ballet-pink;
+  background-color: $ballet-pink;
+}
+.bg-faintpink {
+  background-color: $faint-pink;
+}
+.bg-paleblush {
+  background-color: $pale-blush;
+}
+.bg-deepblush {
+  background-color: $deep-blush;
+}
+.bg-persianpink {
+  background-color: $persian-pink;
+}
+.bg-yellow {
+  background-color: $alabaster-yellow;
+}
+.bg-orchid {
+  background-color: $petite-orchid;
+}
+.bg-blue {
+  background-color: $viking-blue;
+}
+.bg-lightpurple {
+  background-color: $light-purple;
+}
+.bg-darkpurple {
+  background-color: $dark-purple;
+}
+
+
+/* Text Colors */
+.text-dark {
+  color: $soft-black;
+}
+.text-balletpink {
+  color: $ballet-pink;
+}
+.text-faintpink {
+  color: $faint-pink;
+}
+.text-paleblush {
+  color: $pale-blush;
+}
+.text-deepblush {
+  color: $deep-blush;
+}
+.text-persianpink {
+  color: $persian-pink;
+}
+.text-yellow {
+  color: $alabaster-yellow;
+}
+.text-orchid {
+  color: $petite-orchid;
+}
+.text-blue {
+  color: $viking-blue;
+}
+.text-lightpurple {
+  color: $light-purple;
+}
+.text-darkpurple {
+  color: $dark-purple;
 }
 .text-light {
 	color: $faint-pink;

@@ -24,6 +24,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductService } from './services/product.service';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ProductService } from './services/product.service';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserAnimationsModule,
