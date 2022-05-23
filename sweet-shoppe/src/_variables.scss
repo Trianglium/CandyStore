@@ -3,10 +3,6 @@
 $theme: "candy" !default;
 
 
-// Font Awesome 4.7.0
-$fa-font-path : '../node_modules/font-awesome/fonts';
-
-
 //
 // Color system
 //
@@ -69,3 +65,8 @@ $navbar-light-active-color:         $black !default;
 $pagination-hover-color:            $white !default;
 $pagination-hover-bg:               $primary !default;
 $pagination-hover-border-color:     $primary !default;
+
+
+
+// Font Awesome 4.7.0
+$fa-font-path : '~/node_modules/font-awesome/fonts';

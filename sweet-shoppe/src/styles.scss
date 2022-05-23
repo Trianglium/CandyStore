@@ -35,6 +35,12 @@ body {
 		 }
 		 span.brand {
 			 font-weight: 700;
+       a {
+         color: $pink;
+       }
+       a:hover {
+         color: $gray-100;
+       }
 		 }
 }
 .row-header{
