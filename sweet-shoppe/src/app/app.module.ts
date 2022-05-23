@@ -25,6 +25,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductService } from './services/product.service';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { EventsComponent } from './events/events.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     AboutComponent,
     HomeComponent,
     ContactComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    EventsComponent
   ],
   imports: [
     BrowserAnimationsModule,
