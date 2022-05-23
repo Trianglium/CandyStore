@@ -7,6 +7,8 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { EventsComponent } from './events/events.component';
+
 
 const routes: Routes = [
   {
@@ -26,6 +28,10 @@ const routes: Routes = [
     children: [
       { path: 'product', component: ProductComponent }
     ]
+  },
+  {
+    path: 'events',
+    component: EventsComponent
   },
   {
     path: '',
