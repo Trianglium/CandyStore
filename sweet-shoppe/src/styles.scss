@@ -1,5 +1,9 @@
 @import 'variables';
+// Font Awesome 4.7.0
 @import '../node_modules/font-awesome/scss/font-awesome';
+// Bootstrap 5.1.3
+@import '~bootstrap/scss/bootstrap';
+
 
 // Util Theme colors
 $soft-black: #222;
@@ -28,20 +32,37 @@ body {
 
 .navbar-pink {
      background-color: $red;
-		 color: $faint-pink;
+		 color: $light-pink;
+    .navbar-nav .nav-item .nav-link {
+      color: $secondary;
+     }
+     .navbar-nav .nav-item .nav-link:hover {
+      color: $light-pink;
+     }
 		 button {
 			 background-color: $red;
 			 color: $pink;
+       float: right;
 		 }
+     .navbar-toggler {
+      background-color: $red;
+			 color: $pink;
+    }
 		 span.brand {
 			 font-weight: 700;
-       a {
-         color: $pink;
-       }
-       a:hover {
+      a {
          color: $gray-100;
        }
+       a:hover {
+        color: $light-pink;
+      }
 		 }
+     a {
+      color: $pink;
+    }
+    a:hover {
+      color: $gray-100;
+    }
 }
 .row-header{
     @include zero-margin(0px,0px);
@@ -70,86 +91,7 @@ body {
 .text-center {
 	text-align: center;
 }
-/* Color Utils */
-/* Background Colors */
-.bg-fadedpink {
-	background-color: $faint-pink;
-}
-.bg-dark {
-  background-color: $soft-black;
-}
-.bg-balletpink {
-  background-color: $ballet-pink;
-}
-.bg-faintpink {
-  background-color: $faint-pink;
-}
-.bg-paleblush {
-  background-color: $pale-blush;
-}
-.bg-deepblush {
-  background-color: $deep-blush;
-}
-.bg-persianpink {
-  background-color: $persian-pink;
-}
-.bg-yellow {
-  background-color: $alabaster-yellow;
-}
-.bg-orchid {
-  background-color: $petite-orchid;
-}
-.bg-blue {
-  background-color: $viking-blue;
-}
-.bg-lightpurple {
-  background-color: $light-purple;
-}
-.bg-darkpurple {
-  background-color: $dark-purple;
-}
 
-
-/* Text Colors */
-.text-dark {
-  color: $soft-black;
-}
-.text-balletpink {
-  color: $ballet-pink;
-}
-.text-faintpink {
-  color: $faint-pink;
-}
-.text-paleblush {
-  color: $pale-blush;
-}
-.text-deepblush {
-  color: $deep-blush;
-}
-.text-persianpink {
-  color: $persian-pink;
-}
-.text-yellow {
-  color: $alabaster-yellow;
-}
-.text-orchid {
-  color: $petite-orchid;
-}
-.text-blue {
-  color: $viking-blue;
-}
-.text-lightpurple {
-  color: $light-purple;
-}
-.text-darkpurple {
-  color: $dark-purple;
-}
-.text-light {
-	color: $faint-pink;
-}
-.text-dark {
-	color: $soft-black;
-}
 
 
 .jumbotron {
@@ -157,7 +99,3 @@ body {
   margin-bottom: 2rem;
   border-radius: .3rem;
 }
-
-
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
