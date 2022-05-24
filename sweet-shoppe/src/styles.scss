@@ -99,3 +99,28 @@ body {
   margin-bottom: 2rem;
   border-radius: .3rem;
 }
+
+
+
+.nav-brand-logo {
+  width: 45%;
+  max-width: 365px;
+  height: 45%;
+  max-height: 118px;
+}
+
+.svg-container { 
+ display: inline-block;
+ position: relative;
+ width: 60%;
+ padding-bottom: 100%; 
+ vertical-align: middle; 
+ overflow: hidden; 
+}
+
+.svg-content { 
+ display: inline-block;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
