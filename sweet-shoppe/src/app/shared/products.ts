@@ -89,5 +89,15 @@ export const PRODUCTS: Product[] = [
     price: '3.99',
     // tslint:disable-next-line:max-line-length
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit massa, facilisis id sem a, tincidunt condimentum sem. Mauris a nulla est. Nulla commodo eget arcu et vehicula. Etiam rhoncus vitae tortor nec sodales.',
+  },
+  {
+    id: '9',
+    name: 'Paqui One Chip Challenge',
+    image: '/assets/images/product/paqui-one-chip-challenge.jpg',
+    category: 'treats',
+    featured: false,
+    price: '3.99',
+    // tslint:disable-next-line:max-line-length
+    description: 'As the weathers getting colder, things are only starting to heat up at Darty/’s! Think you/’ve got what it takes to own the One chip challenge? Send us your video submissions via Instagram or Facebook to be featured on our page!',
   }
 ];
