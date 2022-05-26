@@ -4,12 +4,14 @@
 // Bootstrap 5.1.3
 @import '~bootstrap/scss/bootstrap';
 
+$card-height: 100%;
 
 // Util Theme colors
 $soft-black: #222;
 $ballet-pink: #fbccd7;
 $faint-pink: #fde6eb;
 $pale-blush: #eb7f9d;
+
 // Brand Theme
 $deep-blush: #e3638b;
 $persian-pink: #f87c96;
@@ -74,11 +76,11 @@ body {
     min-height:400px;
 }
 .footer{
-    background-color: $pink;
+    background-color: $light-pink;
     @include zero-margin(20px, 0px);
 }
 
-/* Utilities */
+// Components 
 .menu-spacer {
   flex: 1 1 auto;
 }
@@ -123,4 +125,23 @@ body {
  position: absolute;
  top: 0;
  left: 0;
+}
+
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+}
+
+
+// Utilities - Size 
+.h-100 {
+  height: 100%!important;
 }
