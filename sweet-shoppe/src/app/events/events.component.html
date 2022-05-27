@@ -13,63 +13,36 @@
     </div>
   </div>
 
-  <!-- Vertical Pills -->
-  <div class="d-flex align-items-start">
-    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <!-- Pill Nav Tab: Events (main) -->
-      <button class="nav-link active" id="v-pills-events-tab" data-bs-toggle="pill" data-bs-target="#v-pills-events" type="button" role="tab" aria-controls="v-pills-events" aria-selected="true">Events</button>
-      <!-- Pill Nav Tab: Feed -->
-      <button class="nav-link" id="v-pills-feed-tab" data-bs-toggle="pill" data-bs-target="#v-pills-feed" type="button" role="tab" aria-controls="v-pills-feed" aria-selected="false">Feed</button>
-      <!-- Pill Nav Tab: Calendar -->
-      <button class="nav-link" id="v-pills-calendar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-calendar" type="button" role="tab" aria-controls="v-pills-calendar" aria-selected="false">Calendar</button>
-
-    </div>
-
-    <!-- Main Events Content Section -->
-    <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-events" role="tabpanel" aria-labelledby="v-pills-events-tab">
-        <!-- Events Home Page (Container Component) -->
-        <div class="container-fluid ms-5">
-          <div class="row">
-            <div class="col">
-              <h2>Events</h2>
-            </div>
-          </div>
-        </div>
-    
-      </div>
-      <div class="tab-pane fade" id="v-pills-feed" role="tabpanel" aria-labelledby="v-pills-feed-tab">
-        <!-- Events Feed Component: Recent Posts about Events / etc. -->
-      </div>
-      <div class="tab-pane fade" id="v-pills-calendar" role="tabpanel" aria-labelledby="v-pills-calendar-tab">
-        <!-- Events Calendar -->
-       <app-event-calendar></app-event-calendar>
-
-      </div>
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-    </div>
-  </div>
-  <!-- Vertical Pill Nav-->
+  <!-- Vertical Pills Nav -->
   <div class="d-flex">
     <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+      
       <li ngbNavItem="Events">
         <a ngbNavLink>Events</a>
         <ng-template ngbNavContent>
-          <h2>Events</h2>
+          <!-- Events Home Page (Container Component) -->
+          <div class="container-fluid ms-5">
+            <div class="row">
+              <div class="col">
+                <h2>Events</h2>
+              </div>
+            </div>
+          </div>
         </ng-template>
       </li>
       <li ngbNavItem="Feed">
         <a ngbNavLink>Feed</a>
         <ng-template ngbNavContent>
-          <!-- Events Calendar -->
-       <app-event-calendar></app-event-calendar>
+          <!-- Events Feed -->
+          <app-event-feed></app-event-feed>
         </ng-template>
       </li>
+      
       <li ngbNavItem="Calendar">
         <a ngbNavLink>Calendar</a>
         <ng-template ngbNavContent>
           <!-- Events Calendar -->
-       <app-event-calendar></app-event-calendar>
+         <app-event-calendar></app-event-calendar>
         </ng-template>
       </li>
     </ul>
@@ -77,5 +50,4 @@
     <div [ngbNavOutlet]="nav" class="ms-4"></div>
   </div>
   
-  <pre>Active: {{ active }}</pre>
 </div>
