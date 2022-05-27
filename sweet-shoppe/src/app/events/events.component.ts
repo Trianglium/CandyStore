@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  active = 'top';
+  active = 'Events';
+  main = 'Events';
 
   constructor() { }
 
