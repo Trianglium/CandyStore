@@ -28,6 +28,8 @@ import { ProductService } from './services/product.service';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { EventsComponent } from './events/events.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
+import { EventFeedComponent } from './event-feed/event-feed.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -41,7 +43,9 @@ import { EventCalendarComponent } from './event-calendar/event-calendar.componen
     ContactComponent,
     PagenotfoundComponent,
     EventsComponent,
-    EventCalendarComponent
+    EventCalendarComponent,
+    EventFeedComponent,
+    BlogComponent
   ],
   imports: [
     BrowserAnimationsModule,
