@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { EventsComponent } from './events/events.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
+import { EventFeedComponent } from './event-feed/event-feed.component';
 
 const routes: Routes = [
   {
@@ -34,7 +35,8 @@ const routes: Routes = [
     path: 'events',
     component: EventsComponent,
     children: [
-      { path: 'calendar', component: EventCalendarComponent }
+      { path: 'calendar', component: EventCalendarComponent },
+      { path: 'feed', component: EventFeedComponent }
     ]
   },
   {
