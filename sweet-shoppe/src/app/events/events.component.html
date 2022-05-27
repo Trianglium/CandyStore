@@ -2,7 +2,7 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Events</li>
+        <li class="breadcrumb-item active" aria-current="page">{{ active }}</li>
       </ol>
     </nav>
 
@@ -12,40 +12,70 @@
       <hr>
     </div>
   </div>
-</div>
 
   <!-- Vertical Pills -->
   <div class="d-flex align-items-start">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Events</button>
-      <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Feed</button>
-      <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Calendar</button>
+      <!-- Pill Nav Tab: Events (main) -->
+      <button class="nav-link active" id="v-pills-events-tab" data-bs-toggle="pill" data-bs-target="#v-pills-events" type="button" role="tab" aria-controls="v-pills-events" aria-selected="true">Events</button>
+      <!-- Pill Nav Tab: Feed -->
+      <button class="nav-link" id="v-pills-feed-tab" data-bs-toggle="pill" data-bs-target="#v-pills-feed" type="button" role="tab" aria-controls="v-pills-feed" aria-selected="false">Feed</button>
+      <!-- Pill Nav Tab: Calendar -->
+      <button class="nav-link" id="v-pills-calendar-tab" data-bs-toggle="pill" data-bs-target="#v-pills-calendar" type="button" role="tab" aria-controls="v-pills-calendar" aria-selected="false">Calendar</button>
 
     </div>
+
+    <!-- Main Events Content Section -->
     <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+      <div class="tab-pane fade show active" id="v-pills-events" role="tabpanel" aria-labelledby="v-pills-events-tab">
         <!-- Events Home Page (Container Component) -->
+        <div class="container-fluid ms-5">
+          <div class="row">
+            <div class="col">
+              <h2>Events</h2>
+            </div>
+          </div>
+        </div>
+    
       </div>
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+      <div class="tab-pane fade" id="v-pills-feed" role="tabpanel" aria-labelledby="v-pills-feed-tab">
         <!-- Events Feed Component: Recent Posts about Events / etc. -->
       </div>
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-        <!-- Events Calendar Component: Search for Dates, see times, etc -->
+      <div class="tab-pane fade" id="v-pills-calendar" role="tabpanel" aria-labelledby="v-pills-calendar-tab">
+        <!-- Events Calendar -->
+       <app-event-calendar></app-event-calendar>
 
       </div>
       <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
     </div>
   </div>
-
-  <div class="row mb-2 pb-2 align-items-center">
-    <div class="col-12">
-      <h2>News</h2>
-    </div>
-    <div class="col-12">
-      <p class="lead">Events coming soon.</p>
-    </div>
+  <!-- Vertical Pill Nav-->
+  <div class="d-flex">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+      <li ngbNavItem="Events">
+        <a ngbNavLink>Events</a>
+        <ng-template ngbNavContent>
+          <h2>Events</h2>
+        </ng-template>
+      </li>
+      <li ngbNavItem="Feed">
+        <a ngbNavLink>Feed</a>
+        <ng-template ngbNavContent>
+          <!-- Events Calendar -->
+       <app-event-calendar></app-event-calendar>
+        </ng-template>
+      </li>
+      <li ngbNavItem="Calendar">
+        <a ngbNavLink>Calendar</a>
+        <ng-template ngbNavContent>
+          <!-- Events Calendar -->
+       <app-event-calendar></app-event-calendar>
+        </ng-template>
+      </li>
+    </ul>
+  
+    <div [ngbNavOutlet]="nav" class="ms-4"></div>
   </div>
-
-    <!-- Calendar -->
-    <app-event-calendar></app-event-calendar>
-  </div>
+  
+  <pre>Active: {{ active }}</pre>
+</div>
