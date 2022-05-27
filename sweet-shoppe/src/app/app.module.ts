@@ -5,6 +5,7 @@ import 'hammerjs';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {NgDynamicBreadcrumbModule} from "ng-dynamic-breadcrumb";
 
 
 // Angular Material
@@ -59,7 +60,8 @@ import { BlogComponent } from './blog/blog.component';
     MatIconModule,
     MatListModule,
     FlexLayoutModule,
-    NgbModule
+    NgbModule,
+    NgDynamicBreadcrumbModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
