@@ -9,7 +9,16 @@ export class EventService {
 
   constructor() { }
 
-  getEvents(): Event[] {
-    return EVENTS;
-  }
+    getEvents(): Event[] {
+      return EVENTS;
+    }
+
+    getEvent(id: string): Event {
+      return EVENTS.filter((event) => (event.id === id))[0];
+    }
+
+    getFeaturedEvent(): Event {
+      return EVENTS.filter((event) => event.startdate)[0];
+    }
+
 }
