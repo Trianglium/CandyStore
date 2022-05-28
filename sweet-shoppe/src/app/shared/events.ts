@@ -72,4 +72,13 @@ export const PRODUCTS: Product[] = [
     // tslint:disable-next-line:max-line-length
     description: 'Chocolate-covered strawberries is a popular gift this time of the year. If your looking for a source, we got you! Pick-up will be Saturday morning- Sunday afternoon. Give us a call with any questions! (224)888-4496 or send us a message and we\’ll get to you within 6-12hrs. From our hearts to yours, thanks for supporting local! ',
   },
+  {
+    id: '8',
+    title: 'Ice Cream Fest 2022',
+    image: '/assets/images/events/mock-icecreamfest-2022.png',
+    startdate:"2022-05-28T09:00:00.556094Z",
+    enddate:"2022-09-09T17:30:28.556094Z",
+    // tslint:disable-next-line:max-line-length
+    description: 'I scream, you scream, we all scream for Ice Cream!! Bring the whole family to Ice Cream Fest 2022! Thanks for supporting local! ',
+  }
 ]
