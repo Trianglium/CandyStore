@@ -10,10 +10,17 @@ import { EventService } from '../services/event.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  product: Product;
+  event: Event;
 
-  constructor() { }
+  constructor(
+    private productservice: ProductService,
+    private eventservice: EventService
+  ) { }
 
   ngOnInit(): void {
+    this.product = this.productservice.getFeaturedProduct();
+    this.event = this.event.eventservice.getUpcomingEvent();
   }
 
 }
