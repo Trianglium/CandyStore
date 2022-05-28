@@ -1,8 +1,8 @@
 export class Event {
     id: string;
     title: string;
-    subtitle: string;
     image: string;
-    dates: string;
+    startdate: string;
+    enddate: string;
     description: string;
 }
