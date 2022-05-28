@@ -14,14 +14,17 @@ export class ProductComponent implements OnInit {
   @Input()
   product: Product;
 
-  constructor(private productService: ProductService,
+  constructor(
+    private productService: ProductService,
     private route: ActivatedRoute,
-    private location: Location) { }
+    private location: Location
+    ) { }
 
   ngOnInit(): void {
     const id = +this.route.snapshot.params['id'];
-    this.product = this.productService.getProducts(id);
+    this.product = this.productService.getProduct(id);
   }
+  
   goBack(): void {
     this.location.back();
   }
