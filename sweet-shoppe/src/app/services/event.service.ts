@@ -6,6 +6,7 @@ import { EVENTS } from '../shared/events';
   providedIn: 'root'
 })
 export class EventService {
+  today: number = Date.now();
 
   constructor() { }
 
@@ -17,7 +18,7 @@ export class EventService {
       return EVENTS.filter((event) => (event.id === id))[0];
     }
 
-    getFeaturedEvent(): Event {
+    getUpcomingEvent(): Event {
       return EVENTS.filter((event) => event.startdate)[0];
     }
 
