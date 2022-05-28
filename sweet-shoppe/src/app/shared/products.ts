@@ -65,7 +65,7 @@ export const PRODUCTS: Product[] = [
     name: 'Funfetti Cookie Sandiwch',
     image: '/assets/images/product/funfetti-cookie-sandiwches.png',
     category: 'treats',
-    featured: false,
+    featured: true,
     price: '4.99',
     // tslint:disable-next-line:max-line-length
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit massa, facilisis id sem a, tincidunt condimentum sem. Mauris a nulla est. Nulla commodo eget arcu et vehicula. Etiam rhoncus vitae tortor nec sodales.',
