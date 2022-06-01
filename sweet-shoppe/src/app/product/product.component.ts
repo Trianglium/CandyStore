@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { Params, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Product } from '../shared/product';
@@ -20,13 +20,13 @@ export class ProductComponent implements OnInit {
     private location: Location
     ) { }
 
-  ngOnInit(): void {
-    const id = +this.route.snapshot.params['id'];
+  ngOnInit() void {
+    const id = this.route.snapshot.params['id'];
     this.product = this.productService.getProduct(id);
   }
   
-  goBack(): void {
-    this.location.back();
-  }
+  //goBack(): void {
+    //this.location.back();
+  //}
 
 }
