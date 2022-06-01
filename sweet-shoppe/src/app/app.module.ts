@@ -31,6 +31,9 @@ import { EventsComponent } from './events/events.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { EventFeedComponent } from './event-feed/event-feed.component';
 import { BlogComponent } from './blog/blog.component';
+import { EventService } from './services/event.service';
+import { FeedbackService } from './services/feedback.service';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import { BlogComponent } from './blog/blog.component';
     EventsComponent,
     EventCalendarComponent,
     EventFeedComponent,
-    BlogComponent
+    BlogComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -63,7 +67,11 @@ import { BlogComponent } from './blog/blog.component';
     NgbModule,
     NgDynamicBreadcrumbModule
   ],
-  providers: [ProductService],
+  providers: [
+    ProductService,
+    EventService,
+    FeedbackService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
