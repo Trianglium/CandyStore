@@ -14,7 +14,7 @@ export class ProductService {
   }
 
   getProduct(id: string): Product {
-    return PRODUCTS.filter((product) => (product.id == id))[0];
+    return PRODUCTS.filter((product) => (product.id === id))[0];
   }
 
   getFeaturedProduct(): Product {
