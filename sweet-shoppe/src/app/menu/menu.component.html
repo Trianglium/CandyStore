@@ -9,7 +9,7 @@
 
   <div class="row">
     <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-6 p-2">
-      <mat-card class="grid-card text-dark" *ngFor="let product of products" [routerLink]="['/product', product.id]">
+      <mat-card class="grid-card text-dark" *ngFor="let product of products" [routerLink]="['/product', product.id]" appHighlight>
           <img mat-card-image src={{product.image}} alt={{product.name}}>
           <mat-card-title class="product-title">
               {{product.name | uppercase}}
