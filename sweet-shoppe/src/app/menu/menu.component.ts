@@ -10,17 +10,15 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+
   products: Product[];
   selectedProduct: Product;
-
-
-
-
 
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
+    this.products = this.productService.getProducts()
+    .then(products => this.products = products);
   }
 
   onSelect(product: Product) {
