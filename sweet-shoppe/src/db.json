@@ -66,29 +66,5 @@
       // tslint:disable-next-line:max-line-length
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit massa, facilisis id sem a, tincidunt condimentum sem. Mauris a nulla est. Nulla commodo eget arcu et vehicula. Etiam rhoncus vitae tortor nec sodales.",
     }
-  ],
-
-  "comments": [
-    {
-      "rating": "5",
-      "title": "best",
-      "comment": "good!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-      "author": "best kids",
-      "date": "2020-10-15"
-      },
-      {
-      "rating": "5",
-      "title": "amazing and it brung a tear to my eye just thinking about how grateful i am to have these in my life",
-      "comment": "amazing and it brung a tear to my eye just thinking about how grateful i am to have these in my life",
-      "author": "lolly pop",
-      "date": "2020-11-27"
-      },
-      {
-      "rating": "4",
-      "title": "not sour enough.",
-      "comment": "Nice flavours and all, but I don’t think they’re sour at all.",
-      "author": "lolly pop",
-      "date": "2020-11-03"
-      }
-    ]
+  ]
 }
