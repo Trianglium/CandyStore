@@ -26,10 +26,11 @@ const routes: Routes = [
   },
   {
     path: 'menu', 
-    component: MenuComponent,
-    children: [
-      { path: 'product', component: ProductComponent }
-    ]
+    component: MenuComponent
+  },
+  {
+    path: 'product/:id', 
+    component: ProductComponent
   },
   {
     path: 'events',
