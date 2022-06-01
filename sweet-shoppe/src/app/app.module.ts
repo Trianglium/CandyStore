@@ -34,6 +34,7 @@ import { BlogComponent } from './blog/blog.component';
 import { EventService } from './services/event.service';
 import { FeedbackService } from './services/feedback.service';
 import { HeaderComponent } from './header/header.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { HeaderComponent } from './header/header.component';
     EventCalendarComponent,
     EventFeedComponent,
     BlogComponent,
-    HeaderComponent
+    HeaderComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserAnimationsModule,
