@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.product = this.productservice.getFeaturedProduct();
-    this.event = this.event.eventservice.getUpcomingEvent();
+    this.event = this.eventservice.getUpcomingEvent();
   }
 
 }
