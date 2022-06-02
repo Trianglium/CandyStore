@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import 'hammerjs';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -15,6 +17,17 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSliderModule } from '@angular/material/slider';
+
 
 // App Components
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +48,7 @@ import { EventService } from './services/event.service';
 import { FeedbackService } from './services/feedback.service';
 import { HeaderComponent } from './header/header.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { baseURL } from './shared/baseurl';
 
 
 @NgModule({
@@ -67,12 +81,25 @@ import { HighlightDirective } from './directives/highlight.directive';
     MatListModule,
     FlexLayoutModule,
     NgbModule,
-    NgDynamicBreadcrumbModule
+    NgDynamicBreadcrumbModule,
+    MatProgressSpinnerModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatSelectModule,
+    MatSlideToggleModule
+
+
   ],
   providers: [
     ProductService,
     EventService,
-    FeedbackService
+    FeedbackService,
+    {provide: 'BaseURL', useValue: baseURL}
   ],
   bootstrap: [AppComponent]
 })
