@@ -1,9 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Product } from '../shared/product';
-import { PRODUCTS } from '../shared/products';
 import { ProductService } from '../services/product.service';
-import { flyInOut, expand } from '../animations/app.animation';
-
+import { flyInOut } from '../animations/app.animation';
 
 @Component({
   selector: 'app-menu',
@@ -15,24 +13,25 @@ import { flyInOut, expand } from '../animations/app.animation';
   'style': 'display: block;'
   },
   animations: [
-    flyInOut(),
-    expand()
+    flyInOut()
   ]
 })
+
 export class MenuComponent implements OnInit {
 
   products: Product[];
-  selectedProduct: Product;
+  errMess: string;
 
-  constructor(private productService: ProductService) { }
+
+  constructor(
+    private productService: ProductService,
+    @Inject('BaseURL') public BaseURL: any
+  ) { }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts()
-    .then(products => this.products = products);
-  }
-
-  onSelect(product: Product) {
-    this.selectedProduct = product;
+    this.productService.getProducts()
+     .subscribe(products => this.products = products,
+       errmess => this.errMess = <any>errmess);
   }
 
 }
