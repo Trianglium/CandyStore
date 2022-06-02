@@ -50,6 +50,7 @@ import { HeaderComponent } from './header/header.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { baseURL } from './shared/baseurl';
 import { LoginComponent } from './login/login.component';
+import { ProductdetailComponent } from './productdetail/productdetail.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { LoginComponent } from './login/login.component';
     BlogComponent,
     HeaderComponent,
     HighlightDirective,
-    LoginComponent
+    LoginComponent,
+    ProductdetailComponent
   ],
   imports: [
     BrowserAnimationsModule,
