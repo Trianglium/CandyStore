@@ -1,9 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+
 import { Product } from '../shared/product';
 import { ProductService } from '../services/product.service';
-import { Event } from '../shared/event';
-import { EventService } from '../services/event.service';
+import { Promotion } from '../shared/promotion';
+import { PromotionService } from '../services/promotion.service';
+import { Leader } from '../shared/leader';
+import { LeaderService } from '../services/leader.service';
 import { flyInOut, expand } from '../animations/app.animation';
+
 
 @Component({
   selector: 'app-home',
@@ -20,17 +24,27 @@ import { flyInOut, expand } from '../animations/app.animation';
   ]
 })
 export class HomeComponent implements OnInit {
+
   product: Product;
-  event: Event;
+  promotion: Promotion;
+  leader: Leader;
+  ProductErrMess: string;
 
   constructor(
     private productservice: ProductService,
-    private eventservice: EventService
+    private promotionservice: PromotionService,
+    private leaderservice: LeaderService,
+    @Inject('BaseURL') public BaseURL: any
   ) { }
 
   ngOnInit(): void {
-    this.product = this.productservice.getFeaturedProduct();
-    this.event = this.eventservice.getUpcomingEvent();
+    this.productservice.getFeaturedProduct()
+      .subscribe(product => this.product = product,
+      producterrmess => this.ProductErrMess = <any>producterrmess);
+    this.promotionservice.getFeaturedPromotion()
+      .subscribe(promotion => this.promotion = promotion);
+    this.leaderservice.getFeaturedLeader()
+      .subscribe(leader => this.leader = leader);
   }
 
 }

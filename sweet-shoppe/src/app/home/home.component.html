@@ -1,38 +1,68 @@
-<div class="container pt-4 mb-4">
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign.gt-md="space-around center"
+     fxLayoutGap="10px">
 
+  <!-- ProductService: 'Featured Product' Card -->
+  <mat-card fxFlex *ngIf="product" [@expand]>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>{{product.name | uppercase}}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ BaseURL + product.image }}" alt={{product.name}}>
+    <mat-card-content>
+      <p>{{product.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <div [hidden]="product || ProductErrMess">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
+  <div fxFlex *ngIf="ProductErrMess">
+    <h2>Error</h2>
+    <h4>{{ ProductErrMess }}</h4>
+  </div>
 
-  <div class="jumbotron">
-    <div class="col-12">
-      <h1>Darty's Sweet Shoppe</h1>
-    </div>
+  <!-- PromotionService: 'Featured Promo' Card -->
+  <mat-card fxFlex *ngIf="promotion" [@expand]>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>{{promotion.name | uppercase}}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ BaseURL + promotion.image}}" alt={{promotion.name}}>
+    <mat-card-content>
+      <p>{{promotion.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <div [hidden]="promotion">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
   </div>
-  <div class="row  mb-4">
-    <div class="col-12">
-      <h2>Browse Our Menu </h2>
-    </div>
-    <div class="col-12">
-      <p>We combine old-school candy with modern-day fun!</p>
-    </div>
-  </div>
-  <div class="row  mb-4">
-    <div class="col-12">
-      <h2>Contact Us </h2>
-    </div>
-    <div class="col-12">
-      <p>We combine old-school candy with modern-day fun!</p>
-    </div>
-  </div>
-  <div class="row  mb-4">
-    <div class="col-12">
-      <h2>Plan your next visit </h2>
-    </div>
-    <div class="col-12">
-      <p>Located at 123 Candyland Ave. <br>
-      Denver, Colorado</p>
-    </div>
+
+  <!-- LeaderService: 'Featured Leader' Card -->
+  <mat-card fxFlex *ngIf="leader" [@expand]>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>{{leader.name | uppercase}} {{leader.abbr}}</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ BaseURL + leader.image}}" alt={{leader.name}}>
+    <mat-card-content>
+      <!-- Professional Title & Description -->
+      <h4>{{leader.designation}}</h4>
+      <p>{{leader.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <div [hidden]="leader">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
   </div>
 
 </div>
-
-
-
