@@ -49,6 +49,7 @@ import { FeedbackService } from './services/feedback.service';
 import { HeaderComponent } from './header/header.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { baseURL } from './shared/baseurl';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { baseURL } from './shared/baseurl';
     EventFeedComponent,
     BlogComponent,
     HeaderComponent,
-    HighlightDirective
+    HighlightDirective,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
