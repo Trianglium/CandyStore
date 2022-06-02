@@ -1,22 +1,33 @@
-<div class="container pt-4 mb-4">
+<div class="container"
+     fxLayout="column"
+     fxLayout="column"
+     fxLayout="column"
+     fxLayoutGap="10px">
 
-  <div class="jumbotron">
-    <div class="col-12">
-      <h1 class="text-center">Menu</h1>
+  <div fxFlex>
+    <div>
+      <h3>Menu</h3>
       <hr>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-6 p-2">
-      <mat-card class="grid-card text-dark" *ngFor="let product of products" [routerLink]="['/product', product.id]" appHighlight>
-          <img mat-card-image src={{product.image}} alt={{product.name}}>
-          <mat-card-title class="product-title">
-              {{product.name | uppercase}}
-          </mat-card-title>
-
-      </mat-card>
-    </div>
+  <!-- Products Grid List -->
+  <div fxFlex *ngIf="products" [@expand]>
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let product of products" [routerLink]="['/productdetail', product.id]" appHighlight>
+        <img height="200px" src="{{BaseURL + product.image}}" alt={{product.name}}>
+        <mat-grid-tile-footer>
+          <h1>{{product.name | uppercase}}</h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
   </div>
-  <app-product [product] = "selectedProduct"></app-product>
+  <div [hidden]="products || errMess">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
+  <div fxFlex *ngIf="errMess">
+    <h2>Error</h2>
+    <h4>{{errMess}}</h4>
+  </div>
+
 </div>
