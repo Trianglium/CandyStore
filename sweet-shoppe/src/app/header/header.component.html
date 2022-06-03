@@ -1,27 +1,32 @@
-<mat-toolbar class="navbar-pink">
-  <span><img src="/assets/images/logo/dartys-sweet-shoppe-logo.svg" height=30 width=41></span>
-  <a mat-button routerLink="/home" outerLinkActive="active"><span class="fa fa-home fa-lg"></span> Home</a>
-  <a mat-button routerLink="/aboutus" outerLinkActive="active"><span class="fa fa-info fa-lg"></span> About</a>
-  <a mat-button routerLink="/menu" outerLinkActive="active"><span class="fa fa-list fa-lg"></span> Menu</a>
-  <a mat-button routerLink="/contactus" outerLinkActive="active"><span class="fa fa-address-card fa-lg"></span> Contact</a>
-  <span class="flex-spacer"></span>
-  <a mat-button (click)="openLoginForm()"><span class="fa fa-sign-in fa-lg"></span> Login</a>
-</mat-toolbar>
+<nav class="navbar navbar-expand-lg navbar-light navbar-pink mb-3">
+<mat-toolbar>
+  <div class="container-fluid text-center">
+  <span class="brand"><a class="navbar-brand" [routerLink]="['/home']"><img src="http://localhost:4200/assets/images/logo/dartys-sweet-shoppe-logo.svg" class="nav-brand-logo"/></a></span>
 
-<div class="container jumbotron"
-    fxLayout="row"
-    fxLayout.sm="column"
-    fxLayout.xs="column"
-    fxLayoutAlign.xs="start center"
-    fxLayoutAlign.sm="start center"
-    fxLayoutAlign.gt-sm="center center"
-    fxLayoutGap="10px">
-    <div fxFlex fxFlex.gt-sm="30%"></div>
-  <div fxFlex fxFlex.gt-sm="60%" class="text-center">
-    <h1>Darty's Sweet Shoppe</h1>
-    <div fxFlex fxFlex.gt-sm="100%">
-      <img src="/assets/images/logo.svg" alt="Logo">
-    </div>
+  <span class="menu-spacer"></span>
+
+  <button mat-icon-button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
+    <mat-icon class="material-icons-outlined">menu</mat-icon>
+  </button>
+  <div [ngbCollapse]="isCollapsed" class="collapse navbar-collapse text-center" id="navbarLinks">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" [routerLink]="['/home']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/menu']" (click)="isCollapsed = true">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/about']" (click)="isCollapsed = true">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/contact']" (click)="isCollapsed = true">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/events']" (click)="isCollapsed = true">Events</a>
+          </li>
+        </ul>
   </div>
-  <div fxFlex></div>
 </div>
+</mat-toolbar>
+</nav>
