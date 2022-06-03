@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 
 import { Feedback, ContactType } from '../shared/feedback';
 import { flyInOut, expand } from '../animations/app.animation';
+
 import { FeedbackService } from '../services/feedback.service';
 
 @Component({
@@ -20,6 +21,7 @@ import { FeedbackService } from '../services/feedback.service';
   ]
 })
 export class ContactComponent implements OnInit {
+
   feedbackForm: FormGroup;
   feedback: Feedback;
   feedbackCopy: any = Feedback;
