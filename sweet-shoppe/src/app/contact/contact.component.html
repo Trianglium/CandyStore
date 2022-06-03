@@ -1,160 +1,133 @@
-<div class="container pt-4 mb-4">
-  <div class="jumbotron">
-    <div class="col-12">
-      <h1 class="text-center">Contact Information</h1>
-      <hr>
+<div class="container"
+  fxLayout="column"
+  fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+        <h1>Contact Us</h1>
+        <hr>
     </div>
   </div>
-
   <!-- Store Location -->
-  <div class="row mb-4 mt-2">
-    <div class="col-12 col-md-4">
-      <h2>Our Location</h2>
-
+  <div fxFlex>
+    <h3>Location Information</h3>
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center">
       <!-- Address -->
-      <div class="col ps-1">
-          <div>
-            <a href="https://maps.google.com/maps/dir//DARTY'S+SWEET+SHOPPE+218+Mitchell+Dr+Plano,+IL+60545/@41.6609782,-88.5033426,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x880ec1d83f2d978f:0x846022a228c2fa1c"><object type="image/svg+xml" data="./assets/images/icons/outlined/place/heart_pin_outlined48x48.svg" class="svg-icon">
-          	</object></a>
-            <p class="address">
-             214 Mitchell Drive <br>
-             &nbsp;  &nbsp;Plano, IL 60545
-            </p>
-          </div>
-
+      <div fxFlex="30" fxFlexOffset="20px">
+        <h4>Our Address</h4>
+        <address>
+          214 Mitchell Drive<br>
+          Plano, IL. 60545<br>
+          United States<br>
+          <i class="fa fa-phone"></i>: +224 888 4496<br>
+          <i class="fa fa-envelope"></i>:
+                <a href="mailto:dartyssweetshoppe@gmail.com">artyssweetshoppe@gmail.com</a>
+        </address>
+        <p></p>
+        <div>
+          <a mat-raised-button href="tel:2248884496"><i class="fa fa-phone"></i> Call</a>
+          <a mat-raised-button href="mailto:dartyssweetshoppe@gmail.com"><i class="fa fa-envelope-o"></i> Email</a>
+          <a mat-raised-button href="https://www.facebook.com/dartyssweetshoppe/"><i class="fa fa-facebook"></i> Facebook</a>
+          <a mat-raised-button href="https://www.instagram.com/dartyssweets/"><i class="fa fa-instagram"></i> Instagram</a>
+        </div>
+        </div>
+      <div fxFlex="50">
+        <!-- Google Maps -->
+        <h4>Map of our Location</h4>
+        <iframe  id="sweetshoppeMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.813927657138!2d-88.50399198456569!3d41.659762129240164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880ec1d83f2d978f%3A0x846022a228c2fa1c!2sDARTY&#39;S%20SWEET%20SHOPPE!5e0!3m2!1sen!2sus!4v1653510267718!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-
-    </div>
-
-  <!-- Google Maps -->
-    <div class="col-12 col-md-8">
-      <iframe  id="sweetshoppeMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.813927657138!2d-88.50399198456569!3d41.659762129240164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880ec1d83f2d978f%3A0x846022a228c2fa1c!2sDARTY&#39;S%20SWEET%20SHOPPE!5e0!3m2!1sen!2sus!4v1653510267718!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 
-    <!-- Contact Methods -->
-    <div class="row mb-2 py-2 align-items-center">
-      <div class="col-12 text-center">
-        <h2>Get in touch</h2>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 py-3 text-center">
-        <a mat-icon-button  href="https://maps.google.com/maps/dir//DARTY'S+SWEET+SHOPPE+218+Mitchell+Dr+Plano,+IL+60545/@41.6609782,-88.5033426,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x880ec1d83f2d978f:0x846022a228c2fa1c"><i class="fa fa-map-marker fa-lg"></i></a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 py-3 text-center">
-        <a mat-icon-button  href="mailto:"><i class="fa fa-envelope-o fa-lg"></i></a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 py-3 text-center">
-        <a mat-icon-button  href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 py-3 text-center">
-        <a mat-icon-button><i class="fa fa-phone fa-lg"></i></a>
-      </div>
-      <div class="col-6 col-sm-4 col-md-3 py-3 text-center">
-        <a mat-icon-button><i class="fa fa-phone-square fa-lg"></i></a>
-      </div>
+  <div fxLayout="row"  fxLayoutAlign="space-around center" class="mt-5 pb-5 pt-5">
+    <!-- FeedBack Section -->
+    <div fxFlex="50" fxFlexOffset="20px" class="form-size">
+      <h2 class="text-center mb-3">Send us your feedback</h2>
 
-      <!-- Social Media Links -->
-      <div class="col-6 col-sm-4 col-md-3 py-3">
-        <h3>Follow Us</h3>
-          <div class="col-2 py-3 text-center">
-              <a mat-icon-button  href="https://www.facebook.com/dartyssweetshoppe"><i class="fa fa-facebook fa-lg"></i></a>
-          </div>
-
-          <div class="col-2 py-3 text-center">
-            <a mat-icon-button  href="https://www.instagram.com/dartyssweets/?hl=en"><i class="fa fa-instagram fa-lg"></i></a>
-          </div>
+      <!-- FeedBack Form -->
+      <form novalidate [formGroup]="feedbackForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+        <p>
+          <mat-form-field class="half-width">
+            <input matInput formControlName="firstname" placeholder="First Name" type="text" required>
+            <mat-error *ngIf="formErrors.firstname">{{ formErrors.firstname }}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="half-width">
+            <input matInput formControlName="lastname" placeholder="Last Name" type="text" required>
+            <mat-error *ngIf="formErrors.lastname">{{ formErrors.lastname }}</mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field class="half-width">
+            <input matInput formControlName="phonenum" placeholder="Tel. Number" type="tel" pattern="[0-9]*" required>
+            <mat-error *ngIf="formErrors.phonenum">{{ formErrors.phonenum }}</mat-error>
+          </mat-form-field>
+          <mat-form-field class="half-width">
+            <input matInput formControlName="email" placeholder="Email" type="email" email required>
+            <mat-error *ngIf="formErrors.email">{{ formErrors.email }}</mat-error>
+          </mat-form-field>
+        </p>
+        <table class="form-size">
+          <td>
+            <mat-slide-toggle formControlName="agree">May we contact you?</mat-slide-toggle>
+          </td>
+          <td>
+            <mat-select placeholder="Contact Preferences" formControlName="contacttype">
+              <mat-option *ngFor="let ctype of contactType" [value]="ctype">
+                {{ ctype }}
+              </mat-option>
+            </mat-select>
+          </td>
+          </table>
+        <p>
+          <mat-form-field class="full-width">
+            <textarea matInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
+          </mat-form-field>
+        </p>
+        <button type="submit" mat-button class="background-primary text-floral-white">Submit</button>
+      </form>
+    </div>
+    <div *ngIf="details" [@expand]>
+        <h2>Your submission</h2>
+        <br>
+        <span mat-line>
+          <b> First Name: </b>
+            {{feedbackCopy.firstname}}
+        </span>
+        <br>
+        <span mat-line>
+          <b> Last Name: </b>
+            {{feedbackCopy.lastname}}
+        </span>
+        <br>
+        <span mat-line>
+          <b> Tel. Number: </b>
+            {{feedbackCopy.phonenum}}
+        </span>
+        <br>
+        <span mat-line>
+          <b> Email: </b>
+            {{feedbackCopy.email}}
+        </span>
+        <br>
+        <span mat-line>
+          <b> May We Contact You? </b>
+            {{feedbackCopy.agree}}
+        </span>
+        <br>
+        <span mat-line>
+          <b> How? </b>
+            {{feedbackCopy.contacttype}}
+        </span>
+        <br>
+        <span mat-line>
+          <b> Feedback: </b>
+            {{feedbackCopy.message}}
+        </span>
+        <br>
       </div>
-
-      <div class="col-6 col-sm-4 col-md-3 py-3">
-        <!-- FeedBack -->
- <div fxFlex fxFlexOffset="20px" class="form-size">
-   <h3>Send us your Feedback</h3>
-   <p>{{ feedbackForm.value | json }} {{ feedbackForm.status | json }}</p>
-
-   <!-- FeedBack Form -->
-   <form novalidate [formGroup]="feedbackForm" #fform="ngForm" (ngSubmit)="onSubmit()">
-     <p>
-       <mat-form-field class="half-width">
-         <input matInput formControlName="firstname" placeholder="First Name" type="text" required>
-         <mat-error *ngIf="formErrors.firstname">{{ formErrors.firstname }}</mat-error>
-       </mat-form-field>
-       <mat-form-field class="half-width">
-         <input matInput formControlName="lastname" placeholder="Last Name" type="text" required>
-         <mat-error *ngIf="formErrors.lastname">{{ formErrors.lastname }}</mat-error>
-       </mat-form-field>
-     </p>
-     <p>
-       <mat-form-field class="half-width">
-         <input matInput formControlName="phonenum" placeholder="Tel. Number" type="tel" pattern="[0-9]*" required>
-         <mat-error *ngIf="formErrors.phonenum">{{ formErrors.phonenum }}</mat-error>
-       </mat-form-field>
-       <mat-form-field class="half-width">
-         <input matInput formControlName="email" placeholder="Email" type="email" email required>
-         <mat-error *ngIf="formErrors.email">{{ formErrors.email }}</mat-error>
-       </mat-form-field>
-     </p>
-     <table class="form-size">
-       <td>
-         <mat-slide-toggle formControlName="agree">May we contact you?</mat-slide-toggle>
-       </td>
-       <td>
-         <mat-select placeholder="Contact Preferences" formControlName="contacttype">
-           <mat-option *ngFor="let ctype of contactType" [value]="ctype">
-             {{ ctype }}
-           </mat-option>
-         </mat-select>
-       </td>
-       </table>
-     <p>
-       <mat-form-field class="full-width">
-         <textarea matInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
-       </mat-form-field>
-     </p>
-     <button type="submit" mat-button class="background-primary text-floral-white">Submit</button>
-   </form>
- </div>
- <div *ngIf="feedbackCopy" [@expand]="">
-     <h2>Your submission</h2>
-     <br>
-     <span mat-line>
-       <b> First Name: </b>
-          {{feedbackCopy.firstname}}
-     </span>
-     <br>
-     <span mat-line>
-       <b> Last Name: </b>
-         {{feedbackCopy.lastname}}
-     </span>
-     <br>
-     <span mat-line>
-       <b> Tel. Number: </b>
-         {{feedbackCopy.phonenum}}
-     </span>
-     <br>
-     <span mat-line>
-       <b> Email: </b>
-         {{feedbackCopy.email}}
-     </span>
-     <br>
-     <span mat-line>
-       <b> May We Contact You? </b>
-         {{feedbackCopy.agree}}
-     </span>
-     <br>
-     <span mat-line>
-       <b> How? </b>
-         {{feedbackCopy.contacttype}}
-     </span>
-     <br>
-     <span mat-line>
-       <b> Feedback: </b>
-         {{feedbackCopy.message}}
-     </span>
-     <br>
-   </div>
-   <div *ngIf="displaySpinner" [@expand]>
-     <h4> Submitting </h4>
-     <mat-spinner></mat-spinner>
-   </div>
+      <div *ngIf="displaySpinner" [@expand]>
+        <h4> Submitting </h4>
+        <mat-spinner></mat-spinner>
       </div>
+    </div>
   </div>
