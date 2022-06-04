@@ -1,4 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { delay, map, catchError } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { baseURL } from '../shared/baseurl';
+import { ProcessHTTPMsgService } from './process-httpmsg.service';
+
 import { Product } from '../shared/product';
 import { PRODUCTS } from '../shared/products';
 
@@ -7,17 +14,39 @@ import { PRODUCTS } from '../shared/products';
 })
 export class ProductService {
 
-  constructor() { }
+  constructor(private http: HttpClient,
+    private processHTTPMsgService: ProcessHTTPMsgService) { }
 
-  getProducts(): Product[] {
-    return PRODUCTS;
+  getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(baseURL + 'products')
+      .pipe(catchError(this.processHTTPMsgService.handleError));
   }
 
-  getProduct(id: string): Product {
-    return PRODUCTS.filter((product) => (product.id === id))[0];
+  getProduct(id: number): Observable<Product> {
+    return this.http.get<Product>(baseURL + 'products/' + id)
+      .pipe(catchError(this.processHTTPMsgService.handleError));
   }
 
-  getFeaturedProduct(): Product {
-    return PRODUCTS.filter((product) => product.featured)[0];
+  getFeaturedProduct(): Observable<Product> {
+    return this.http.get<Product[]>(baseURL + 'products?featured=true').pipe(map(products => products[0]))
+      .pipe(catchError(this.processHTTPMsgService.handleError));
   }
+
+  getProductIds(): Observable<number[] | any> {
+    return this.getProducts().pipe(map(products => products.map(product => product.id)))
+      .pipe(catchError(error => error));
+  }
+  // Leverage the PUT method to save changes to the object back to the server
+  putProduct(product: Product): Observable<Product> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+    return this.http.put<Product>(baseURL + 'products/' + product.id, product, httpOptions)
+      .pipe(catchError(this.processHTTPMsgService.handleError));
+
+  }
+
+
 }
