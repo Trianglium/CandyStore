@@ -1,18 +1,3 @@
-<div  class="d-flex flex-column min-vh-100">
-  <!-- Navigation -->
-  <app-header></app-header>
-
-  <!-- Main Content Section -->
-  <div  class="container-fluid px-5 mb-3">
-    <!-- Breadcrumbs | https://www.npmjs.com/package/ng-dynamic-breadcrumb -->
-    <app-ng-dynamic-breadcrumb></app-ng-dynamic-breadcrumb>
-
-    <router-outlet></router-outlet>
-  </div>
-
-  <!-- Footer -->
-  <div id="footerapp-container" class="container-fluid mt-auto mb-2 px-5 pt-4 pb-4">
-    <app-footer></app-footer>
-  </div>
-
-</div>
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
