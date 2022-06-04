@@ -45,7 +45,6 @@
     <!-- Comments Section -->
     <div class="form-size">
       <h3>Leave a comment</h3>
-      <p>{{ commentForm.value | json }} {{ commentForm.status | json }}</p>
       <!-- Comment Form -->
       <form novalidate [formGroup]="commentForm" #fform="ngForm" (ngSubmit)="onSubmit()">
         <!-- Author Name -->
