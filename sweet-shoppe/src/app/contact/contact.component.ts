@@ -64,7 +64,7 @@ export class ContactComponent implements OnInit {
     this.createForm();
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
     this.submitted = false;
   }
 
@@ -106,7 +106,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
+    
     this.feedback = this.feedbackForm.value;
     console.log(this.feedback);
     this.displaySpinner = true;
@@ -118,11 +118,11 @@ export class ContactComponent implements OnInit {
       setTimeout(() => {
         this.submitted = false;
         this.details = false;
-
+        
       }, 5000);
-
+      
     });
-
+ 
     this.feedbackForm.reset({
       firstname: '',
       lastname: '',
