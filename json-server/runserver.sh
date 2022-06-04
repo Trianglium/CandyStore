@@ -1,2 +1,2 @@
-#!bin/bash
-json-server --watch db.json -d 2000
+#! /bin/bash
+serve="json-server --watch db.json -d 2000"
