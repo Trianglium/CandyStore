@@ -1,27 +1,48 @@
+
+
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+    margin: 0px auto;
+    padding: $pad-up-down $pad-left-right;
+}
+
+.footer{
+    background-color: rgba(222, 226, 230, 0.681) !important;
+    @include zero-margin(20px, 0px);
+}
+
+.btn-facebook {color:#fff!important; background-color:#3b5998!important;}
+.btn-google-plus{color:#fff!important;background-color:#dd4b39!important;}
+.btn-youtube{color:#fff!important;background-color:#ff4b39!important;}
+.btn-linkedin{color:#fff!important;background-color:#007bb6!important;}
+.btn-twitter{color:#fff!important;background-color:#55acee!important;}
+.btn-mail{color:#fff!important;background-color:#512DA8!important;}
+
+
+
 .footer-text {
-  font-size: 0.8em;
-  font-weight: 600;
-}
-.footer-h2 {
-  margin: 8px 8px;
-  font-size: 1.2em;
-  font-weight: 700;
-}
-
-
-.footer-title-border {
-  border-bottom: 1px solid black;
-}
-
-.foot-cols-center {
-  max-width: 50%;
-}
-@media (max-width: 424px) {
-  .foot-cols-center {
-    max-width: 100%;
+    font-size: 0.8em;
+    font-weight: 600;
   }
-}
-
-.icon-mutedpink {
-  background-color: #fde6eb;
-}
+  .footer-h2 {
+    margin: 8px 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+  
+  
+  .footer-title-border {
+    border-bottom: 1px solid black;
+  }
+  
+  .foot-cols-center {
+    max-width: 50%;
+  }
+  @media (max-width: 424px) {
+    .foot-cols-center {
+      max-width: 100%;
+    }
+  }
+  
+  .icon-mutedpink {
+    background-color: #fde6eb;
+  }
