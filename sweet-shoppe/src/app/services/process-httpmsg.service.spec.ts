@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ProcessHttpmsgService } from './process-httpmsg.service';
+import { ProcessHTTPMsgService } from './process-httpmsg.service';
 
-describe('ProcessHttpmsgService', () => {
-  let service: ProcessHttpmsgService;
+describe('ProcessHTTPMsgService', () => {
+  let service: ProcessHTTPMsgService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ProcessHttpmsgService);
+    service = TestBed.inject(ProcessHTTPMsgService);
   });
 
   it('should be created', () => {
