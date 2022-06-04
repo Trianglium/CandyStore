@@ -1,6 +1,5 @@
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
-// Factory function that supplies the animation
 export function visibility() {
     return trigger('visibility', [
         state('shown', style({
@@ -14,7 +13,7 @@ export function visibility() {
         transition('* => *', animate('0.5s ease-in-out'))
     ]);
 }
-//  Animation Support for Route Changes
+
 export function flyInOut() {
     return trigger('flyInOut', [
         state('*', style({ opacity: 1, transform: 'translateX(0)'})),
@@ -27,7 +26,6 @@ export function flyInOut() {
         ])
     ]);
 }
-// Animation to Render View from Fetched Data
 export function expand() {
     return trigger('expand', [
         state('*', style({ opacity: 1, transform: 'translateX(0)' })),
