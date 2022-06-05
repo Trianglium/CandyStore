@@ -13,7 +13,7 @@
 
   <!-- Products Grid List -->
   <div fxFlex *ngIf="products" [@expand]>
-    <mat-grid-list cols="2" rowHeight="200px">
+    <mat-grid-list cols="3" rowHeight="300px">
       <mat-grid-tile *ngFor="let product of products" [routerLink]="['/productdetail', product.id]" appHighlight>
         <img height="200px" src="{{BaseURL + product.image}}" alt={{product.name}}>
         <mat-grid-tile-footer>
