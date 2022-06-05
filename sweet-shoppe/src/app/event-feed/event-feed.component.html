@@ -1,5 +1,35 @@
-<div class="container-fluid ms-5 pt-4 mb-4">
-    <div class="col-12">
-       <h3>Feed</h3>
+<div class="container-fluid ms-5">
+   <div class="row">
+     <div class="col">
+       <h2>Feed</h2>
      </div>
-  </div>
+   </div>
+ </div>
+
+ <div class="container"
+      fxLayout="column"
+      fxLayout="column"
+      fxLayout="column"
+      fxLayoutGap="10px">
+
+   <!-- Event Poster Grid List -->
+   <div fxFlex *ngIf="products" [@expand]>
+     <mat-grid-list cols="3" rowHeight="300px">
+       <mat-grid-tile *ngFor="let event of events" appHighlight>
+
+         <img height="200px" src="{{BaseURL + event.image}}" alt={{event.title}}>
+         <mat-grid-tile-footer>
+           <h1>{{event.title | uppercase}}</h1>
+         </mat-grid-tile-footer>
+       </mat-grid-tile>
+     </mat-grid-list>
+   </div>
+   <div [hidden]="products || errMess">
+     <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
+   </div>
+   <div fxFlex *ngIf="errMess">
+     <h2>Error</h2>
+     <h4>{{errMess}}</h4>
+   </div>
+
+ </div>
