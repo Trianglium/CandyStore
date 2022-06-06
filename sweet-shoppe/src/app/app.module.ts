@@ -29,6 +29,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
@@ -53,6 +54,7 @@ import { EventsComponent } from './events/events.component';
 import { EventFeedComponent } from './event-feed/event-feed.component';
 import { EventCalendarComponent } from './event-calendar/event-calendar.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { EventDetailComponent } from './event-detail/event-detail.component';
 
 
 @NgModule({
@@ -70,7 +72,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     EventsComponent,
     EventFeedComponent,
     EventCalendarComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -94,7 +97,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     MatProgressSpinnerModule,
     HttpClientModule,
     NgbModule,
-    MatIconModule
+    MatIconModule,
+    MatDatepickerModule
   ],
   providers: [
     ProductService,

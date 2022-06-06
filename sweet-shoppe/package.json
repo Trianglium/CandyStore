@@ -1,6 +1,7 @@
 {
   "name": "sweet-shoppe",
   "version": "0.0.0",
+  "author": "Jordan Brocker Rudow",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
