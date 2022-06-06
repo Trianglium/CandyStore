@@ -32,6 +32,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { baseURL } from './shared/baseurl';
 
@@ -98,7 +99,8 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
     HttpClientModule,
     NgbModule,
     MatIconModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
     ProductService,
