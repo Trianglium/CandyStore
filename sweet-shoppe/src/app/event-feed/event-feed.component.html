@@ -13,7 +13,7 @@
       fxLayoutGap="10px">
 
    <!-- Event Poster Grid List -->
-   <div fxFlex *ngIf="products" [@expand]>
+   <div fxFlex *ngIf="events" [@expand]>
      <mat-grid-list cols="3" rowHeight="300px">
        <mat-grid-tile *ngFor="let event of events" appHighlight>
 
@@ -24,7 +24,7 @@
        </mat-grid-tile>
      </mat-grid-list>
    </div>
-   <div [hidden]="products || errMess">
+   <div [hidden]="events || errMess">
      <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
    </div>
    <div fxFlex *ngIf="errMess">
