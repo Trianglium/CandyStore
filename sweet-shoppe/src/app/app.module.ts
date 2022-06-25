@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {PortalModule} from '@angular/cdk/portal';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -80,6 +81,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    PortalModule,
     MatToolbarModule,
     FlexLayoutModule,
     MatListModule,
