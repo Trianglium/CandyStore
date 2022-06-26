@@ -1,0 +1,598 @@
+.candy-components {
+  box-sizing: border-box;
+  display: flex;
+  font-family: Roboto;
+  margin: 64px auto;
+  width: 1664px;
+}
+.candy-components__section {
+  display: flex;
+}
+.candy-components__column {
+  display: flex;
+  height: 664px;
+  flex-direction: column;
+  margin: 0 8px;
+  width: 400px;
+}
+.candy-components .flex {
+  flex: 1;
+  box-sizing: border-box;
+}
+.candy-components p {
+  color: #616161;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.candy-component > p {
+  color: #616161;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 0;
+}
+.candy-component__section {
+  align-items: center;
+  background-color: #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  width: 400px;
+}
+.candy-component__section--size-narrow {
+  height: 152px;
+}
+.candy-component__section__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+}
+.candy-component__section__content__frame {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.candy-component__section--size-full {
+  height: 620px;
+}
+.candy-component__containers {
+  align-items: flex-start;
+  display: flex;
+  height: 292px;
+  flex-direction: row;
+}
+.candy-component__containers__primary__only p {
+  display: none;
+}
+.candy-component__containers__primary, .candy-component__containers__secondary {
+  display: flex;
+  align-items: center;
+}
+.candy-component__containers__primary > p, .candy-component__containers__secondary > p {
+  color: #616161;
+  font-size: 11px;
+  font-weight: bold;
+}
+.candy-component__containers__primary__only {
+  margin-top: 40px;
+}
+.candy-component__containers__secondary {
+  margin-left: 80px;
+}
+.candy-component__containers__primary, .candy-component__containers__secondary {
+  flex-direction: column;
+}
+.candy-component__containers__primary > p, .candy-component__containers__secondary > p {
+  margin: 25px 0 15px;
+}
+.candy-component__containers__primary > *[class^="candy-"]:not(:nth-child(2)), .candy-component__containers__secondary > *[class^="candy-"]:not(:nth-child(2)) {
+  margin-top: 40px;
+}
+.candy-component__containers[dir-horizontal] {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.candy-component__containers[dir-horizontal] .candy-component__containers__primary__only {
+  margin-top: 0;
+}
+.candy-component__containers[dir-horizontal] .candy-component__containers__secondary {
+  margin-left: 0;
+  margin-top: 12px;
+}
+.candy-component__containers[dir-horizontal] .candy-component__containers__primary, .candy-component__containers[dir-horizontal] .candy-component__containers__secondary {
+  flex-direction: row;
+}
+.candy-component__containers[dir-horizontal] .candy-component__containers__primary > p, .candy-component__containers[dir-horizontal] .candy-component__containers__secondary > p {
+  margin: 0 16px 0 0;
+  text-align: right;
+  width: 60px;
+}
+.candy-component__containers[dir-horizontal] .candy-component__containers__primary > *[class^="candy-"], .candy-component__containers[dir-horizontal] .candy-component__containers__secondary > *[class^="candy-"] {
+  margin-top: 0;
+  margin-right: 60px;
+}
+*, :after, :before {
+  box-sizing: inherit;
+}
+@media all and (max-width: 1712px) {
+  .candy-components {
+    margin: 32px auto;
+    width: 832px;
+  }
+  .candy-components__section {
+    flex-direction: column;
+  }
+  .candy-components__column {
+    margin-bottom: 64px;
+  }
+}
+@media all and (max-width: 880px) {
+  .candy-components {
+    flex-direction: column;
+    width: 416px;
+  }
+}
+
+    .candy-component__buttons .candy-component__containers__primary .candy-button,
+    .candy-component__buttons .candy-component__containers__primary .candy-fab {
+      background-color: #f75792;
+      color: #ededed;
+    }
+
+    .candy-component__buttons .candy-component__containers__primary .candy-button--plain,
+    .candy-component__buttons .candy-component__containers__primary .candy-fab--plain {
+      background-color: transparent;
+      color: #f75792;
+    }
+
+    .candy-component__buttons .candy-component__containers__secondary .candy-button,
+    .candy-component__buttons .candy-component__containers__secondary .candy-fab {
+      background-color: #55c4c6;
+      color: #191919;
+    }
+
+    .candy-component__buttons .candy-component__containers__secondary .candy-button--plain,
+    .candy-component__buttons .candy-component__containers__secondary .candy-fab--plain {
+      background-color: transparent;
+      color: #55c4c6;
+    }
+
+    .candy-component__buttons .candy-component__containers__primary .candy-button--raised.candy-ripple-upgraded::before,
+    .candy-component__buttons .candy-component__containers__primary .candy-button--raised.candy-ripple-upgraded::after {
+      background-color: rgba(237, 237, 237, 0.06);
+    }
+
+    .candy-component__buttons .candy-component__containers__primary .candy-button--plain.candy-ripple-upgraded::before,
+    .candy-component__buttons .candy-component__containers__primary .candy-button--plain.candy-ripple-upgraded::after {
+      background-color: rgba(247, 87, 146, 0.06);
+    }
+
+    .candy-component__buttons .candy-component__containers__primary .candy-fab.candy-ripple-upgraded::after {
+      background-color: rgba(237, 237, 237, 0.16);
+    }
+
+    .candy-component__buttons .candy-component__containers__primary .candy-fab--plain.candy-ripple-upgraded::after {
+      background-color: rgba(247, 87, 146, 0.16);
+    }
+
+    .candy-component__buttons .candy-component__containers__secondary .candy-button--raised.candy-ripple-upgraded::before,
+    .candy-component__buttons .candy-component__containers__secondary .candy-button--raised.candy-ripple-upgraded::after {
+      background-color: rgba(25, 25, 25, 0.06);
+    }
+
+    .candy-component__buttons .candy-component__containers__secondary .candy-button--plain.candy-ripple-upgraded::before,
+    .candy-component__buttons .candy-component__containers__secondary .candy-button--plain.candy-ripple-upgraded::after {
+      background-color: rgba(85, 196, 198, 0.06);
+    }
+
+    .candy-component__buttons .candy-component__containers__secondary .candy-fab.candy-ripple-upgraded::after {
+      background-color: rgba(25, 25, 25, 0.16);
+    }
+
+    .candy-component__buttons .candy-component__containers__secondary .candy-fab--plain.candy-ripple-upgraded::after {
+      background-color: rgba(85, 196, 198, 0.16);
+    }
+  
+  .candy-component__selection .candy-component__containers__primary__only .candy-snackbar {
+    transform: translate(-50%,-100%);
+  }
+
+  .candy-component__selection .candy-snackbar {
+    left: auto !important;
+    transform: translate(-28%,-164%);
+    position: absolute;
+    min-width: 240px;
+    margin-left: -16px;
+    width: 240px;
+  }
+
+  .candy-component__selection .candy-snackbar__secondary {
+    transform: translate(-28%,-40%);
+  }
+
+  .candy-component__selection .candy-snackbar__text,
+  .candy-component__selection .candy-snackbar__action-button {
+    opacity: 1;
+    font-size: 12px;
+  }
+  
+    .candy-component__switches .candy-component__containers__primary .candy-checkbox__native-control:checked:not(:disabled) ~ .candy-checkbox__background,
+    .candy-component__switches .candy-component__containers__primary .candy-checkbox__native-control:indeterminate:not(:disabled) ~ .candy-checkbox__background,
+    .candy-component__switches .candy-component__containers__primary .candy-radio__native-control:checked+.candy-radio__background .candy-radio__inner-circle {
+      background-color: #f75792;
+      border-color: #f75792;
+    }
+
+    .candy-component__switches .candy-component__containers__primary .candy-switch__native-control:checked~.candy-switch__background::before,
+    .candy-component__switches .candy-component__containers__primary .candy-switch__native-control:checked~.candy-switch__background .candy-switch__knob::before,
+    .candy-component__switches .candy-component__containers__primary .candy-switch__native-control:checked~.candy-switch__background .candy-switch__knob {
+      background-color: #f75792;
+    }
+
+    .candy-component__switches .candy-component__containers__primary .candy-radio__native-control:checked+.candy-radio__background .candy-radio__outer-circle {
+      border-color: #f75792;
+    }
+
+    .candy-component__switches .candy-component__containers__primary .candy-checkbox__background::before,
+    .candy-component__switches .candy-component__containers__primary .candy-radio__background::before {
+      background-color: #f75792;
+    }
+
+    .candy-component__switches .candy-component__containers__secondary .candy-checkbox__native-control:checked:not(:disabled) ~ .candy-checkbox__background,
+    .candy-component__switches .candy-component__containers__secondary .candy-checkbox__native-control:indeterminate:not(:disabled) ~ .candy-checkbox__background,
+    .candy-component__switches .candy-component__containers__secondary .candy-radio__native-control:checked+.candy-radio__background .candy-radio__inner-circle {
+      background-color: #55c4c6;
+      border-color: #55c4c6;
+    }
+
+    .candy-component__switches .candy-component__containers__secondary .candy-switch__native-control:checked~.candy-switch__background::before,
+    .candy-component__switches .candy-component__containers__secondary .candy-switch__native-control:checked~.candy-switch__background .candy-switch__knob::before,
+    .candy-component__switches .candy-component__containers__secondary .candy-switch__native-control:checked~.candy-switch__background .candy-switch__knob {
+      background-color: #55c4c6;
+    }
+
+    .candy-component__switches .candy-component__containers__secondary .candy-radio__native-control:checked+.candy-radio__background .candy-radio__outer-circle {
+      border-color: #55c4c6;
+    }
+
+    .candy-component__switches .candy-component__containers__secondary .candy-checkbox__background::before,
+    .candy-component__switches .candy-component__containers__secondary .candy-radio__background::before {
+      background-color: #55c4c6;
+    }
+
+    .candy-component__switches .candy-component__containers__primary .candy-checkbox.candy-ripple-upgraded--unbounded::before,
+    .candy-component__switches .candy-component__containers__primary .candy-checkbox.candy-ripple-upgraded--unbounded::after,
+    .candy-component__switches .candy-component__containers__primary .candy-radio.candy-ripple-upgraded--unbounded::before,
+    .candy-component__switches .candy-component__containers__primary .candy-radio.candy-ripple-upgraded--unbounded::after {
+      background-color: rgba(247, 87, 146, 0.14);
+    }
+
+    .candy-component__switches .candy-component__containers__secondary .candy-checkbox.candy-ripple-upgraded--unbounded::before,
+    .candy-component__switches .candy-component__containers__secondary .candy-checkbox.candy-ripple-upgraded--unbounded::after,
+    .candy-component__switches .candy-component__containers__secondary .candy-radio.candy-ripple-upgraded--unbounded::before,
+    .candy-component__switches .candy-component__containers__secondary .candy-radio.candy-ripple-upgraded--unbounded::after {
+      background-color: rgba(85, 196, 198, 0.14);
+    }
+  
+  .candy-component__cards .candy-card {
+    background-color: #ffffff;
+    height: 316px;
+    width: 262px;
+  }
+
+  .candy-component__cards .candy-card__title,
+  .candy-component__cards .candy-card__subtitle {
+    font-size: 11px;
+    line-height: 17px;
+  }
+
+  .candy-component__cards .candy-card__subtitle {
+    color: #707070;
+  }
+
+  .candy-component__cards .candy-card__header {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    padding: 0 16px 20px;
+  }
+
+  .candy-component__cards .demo-card__avatar {
+    background: #bdbdbd;
+    height: 40px;
+    width: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+  }
+
+  .candy-component__cards .candy-card__supporting-text {
+    font-size: 10px;
+  }
+
+  .candy-component__cards .demo-card--with-avatar .candy-card__title,
+  .candy-component__cards .demo-card--with-avatar .candy-card__subtitle {
+    margin-left: 56px;
+  }
+
+  .candy-component__cards .candy-card__actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 16px 16px 16px;
+  }
+
+  .candy-component__cards .candy-card__media {
+    height: 140px;
+    overflow: hidden;
+    padding: 0
+  }
+
+  .candy-component__cards .candy-card__media .material-image {
+    top: 64px;
+    position: relative;
+  }
+
+  .candy-component__cards .candy--theme-primary {
+    background-color: #f75792;
+    color: #ededed;
+  }
+
+  .candy-component__cards .candy--theme-secondary {
+    background-color: #55c4c6;
+    color: #191919;
+  }
+
+  .candy-component__cards .material-image .material-image__background {
+    fill: #c01965;
+  }
+
+  .candy-component__cards .material-image .material-image--shape-circle,
+  .candy-component__cards .material-image .material-image--shape-triangle {
+    fill: #f75792;
+  }
+
+  .candy-component__cards .material-image .material-image--shape-intersection {
+    fill: #c01965;
+  }
+
+  .candy-component__cards .candy-button--raised.candy--theme-primary.candy-ripple-upgraded::after {
+    background-color: rgba(237, 237, 237, 0.06);
+  }
+
+  .candy-component__cards .candy-button--raised.candy--theme-secondary.candy-ripple-upgraded::after {
+    background-color: rgba(25, 25, 25, 0.06);
+  }
+  
+  .candy-component__menu .candy-toolbar {
+    background-color: #55c4c6;
+    z-index: 1;
+  }
+
+  .candy-component__menu .candy-toolbar {
+    height: 56px;
+    padding: 16px;
+  }
+
+  .candy-component__menu .candy-permanent-drawer {
+    border-right: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+  }
+
+  .candy-component__menu .candy-backdrop {
+    background-color: rgba(0, 0, 0, .50);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+
+  .candy-component__menu .nav-header {
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .candy-component__menu .nav-header .material-image {
+    position: relative;
+    top: -50px;
+  }
+
+  .candy-component__menu .candy-permanent-drawer {
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  .candy-component__menu .candy-list-item {
+    font-weight: 400;
+  }
+
+  .candy-component__menu .candy-list-item.candy-ripple-upgraded {
+    left: 0;
+  }
+
+  .candy-component__menu .candy-list-item.candy-ripple-upgraded::before,
+  .candy-component__menu .candy-list-item.candy-ripple-upgraded::after {
+    background-color: rgba(247, 87, 146, 0.06);
+  }
+
+  .candy-component__menu .candy-permanent-drawer .candy-permanent-drawer--selected::before,
+  .candy-component__menu .candy-permanent-drawer .candy-list-item:active::before {
+    background-color: #f75792;
+    opacity: .16;
+  }
+
+  .candy-component__menu .candy-permanent-drawer--selected.candy-list-item .candy-list-item__start-detail,
+  .candy-component__menu .candy-permanent-drawer .candy-permanent-drawer--selected {
+    color: inherit;
+  }
+
+  .candy-component__menu .material-image__background {
+    fill: #c01965;
+  }
+
+  .candy-component__menu .material-image--shape-circle,
+  .candy-component__menu .material-image--shape-triangle {
+    fill: #f75792;
+  }
+
+  .candy-component__menu .material-image--shape-intersection {
+    fill: #c01965;
+  }
+  
+  .candy-component__textfield .candy-component__containers {
+    margin-top: 40px;
+  }
+
+  .candy-component__textfield .candy-component__containers__secondary {
+    padding: 17px 0;
+  }
+
+  .candy-component__textfield .candy-component__containers p {
+    padding-bottom: 20px;
+  }
+
+  .candy-component__textfield .candy-textfield {
+    margin-right: 14px !important;
+  }
+
+  .candy-component__textfield .candy-textfield__input {
+    width: 264px;
+  }
+
+  .candy-component__textfield .candy-textfield__label {
+    bottom: 12px;
+  }
+
+  .candy-component__textfield .candy-textfield--theme-primary .candy-textfield__label {
+    color: #f75792;
+  }
+
+  .candy-component__textfield .candy-textfield--theme-primary .candy-textfield:not(.candy-textfield--upgraded) .candy-textfield__input:focus {
+    border-color: #f75792;
+  }
+
+  .candy-component__textfield .candy-textfield--theme-secondary .candy-textfield__label {
+    color: #55c4c6;
+  }
+
+  .candy-component__textfield .candy-textfield--theme-secondary .candy-textfield:not(.candy-textfield--upgraded) .candy-textfield__input:focus {
+    border-color: #55c4c6;
+  }
+  
+  .candy-component__toolbar .app-bar {
+    background-color: #c01965;
+    display: block;
+    height: 20px;
+    width: 100%;
+  }
+
+  .candy-component__toolbar .candy-toolbar {
+    height: 56px;
+    padding: 16px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .candy-component__toolbar .candy-toolbar__section {
+    align-items: center;
+  }
+
+  .candy-component__toolbar .candy-toolbar__title {
+    padding-left: 8px;
+  }
+
+  .candy-component__toolbar .material-icons {
+    color: #ededed;
+  }
+
+  .candy-component__toolbar .material-image {
+    position: relative;
+    top: -64px;
+  }
+
+  .candy-component__toolbar main {
+    background-color: white;
+    height: calc(100% - 48px);
+  }
+
+  .candy-component__toolbar .cover-image__frame {
+    display: block;
+    height: 220px;
+    position: relative;
+    width: 100%;
+  }
+
+  .candy-component__toolbar .cover-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .candy-component__toolbar .candy-fab {
+    position: absolute;
+    bottom: -25px;
+    right: 28px;
+  }
+
+  .candy-component__toolbar .content {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 50px 35px;
+  }
+
+  .candy-component__toolbar .candy-component__section__content__frame::before {
+    bottom: 0;
+    content: "";
+    background-image: url(//storage.googleapis.com/demos-in-spec/images/android-bottom.png);
+    background-repeat: no-repeat;
+    height: 48px;
+    position: absolute;
+    width: 100%;
+    z-index: 9999999;
+  }
+
+  .candy-component__toolbar .candy--theme-primary {
+    background-color: #f75792;
+    color: #ededed;
+  }
+
+  .candy-component__toolbar .candy--theme-secondary {
+    background-color: #55c4c6;
+    color: #191919;
+  }
+
+  .candy-component__toolbar .material-image .material-image__background {
+    fill: #099395;
+  }
+
+  .candy-component__toolbar .material-image .material-image--shape-circle,
+  .candy-component__toolbar .material-image .material-image--shape-triangle {
+    fill: #8bf7f9;
+  }
+
+  .candy-component__toolbar .material-image .material-image--shape-intersection {
+    fill: #099395;
+  }
+
+  .candy-component__toolbar .candy-icon-toggle::before,
+  .candy-component__toolbar .candy-icon-toggle::after {
+    background-color: rgba(237, 237, 237, 0.06);
+  }
+
+  .candy-component__toolbar .candy-fab.candy--theme-primary.candy-ripple-upgraded::after {
+    background-color: rgba(237, 237, 237, 0.16);
+  }
+
+  .candy-component__toolbar .candy-fab.candy--theme-secondary.candy-ripple-upgraded::after {
+    background-color: rgba(25, 25, 25, 0.16);
+  }
